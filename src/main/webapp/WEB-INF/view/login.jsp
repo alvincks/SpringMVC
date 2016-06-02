@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>    
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>    
     
 <!DOCTYPE html>
 <html>
@@ -27,12 +27,12 @@
 
 	<form:form commandName="user">
 		<form:errors path="*" cssClass="errorblock" element="div"/>
-		<label for="textinput1">Enter User Name:</label>
+		<label for="textinput1"><spring:message code="user.username" />:</label>
 		<form:input path="username" cssErrorClass="error"/>
 		<form:errors path="username" cssClass="error" />
 		<br>
 		
-		<label for="textinput2">Enter Password:</label>
+		<label for="textinput2"><spring:message code="user.password" />:</label>
 		<form:password path="password" cssErrorClass="error"/>
 		<form:errors path="password" cssClass="error" />
 		<br>

@@ -1,8 +1,14 @@
 package com.mvc.web.model;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class User {
 
+	@NotEmpty @Size(min=5, max=8)
 	private String username;
+	@NotEmpty
 	private String password;
 	
 	
